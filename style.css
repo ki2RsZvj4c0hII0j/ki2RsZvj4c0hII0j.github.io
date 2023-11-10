@@ -1,0 +1,153 @@
+body {
+  /* font-size: 62.5%; */
+  background: #dadada;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 2;
+  /* padding: 5em; */
+  user-select: none;
+}
+
+.accordion {
+  font-size: 1rem;
+  width: auto;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.accordion-header,
+.accordion-body {
+  background: white;
+}
+
+.accordion-header {
+  padding: 1.5em 1.5em;
+  background: #3F51B5;
+  color: white;
+  cursor: pointer;
+  font-size: .7em;
+  letter-spacing: .1em;
+  transition: all .3s;
+  text-transform: uppercase;
+}
+
+.accordion__item {
+  border-bottom: 1px solid #3a4ba4;
+}
+
+.accordion__item .accordion__item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.accordion-header:hover {
+  background: #2D3D99;
+  position: relative;
+  z-index: 5;
+}
+
+.accordion-body {
+  background: #fcfcfc;
+  color: #353535;
+  display: none;
+}
+
+.accordion-body__contents {
+  padding: 1.5em 1.5em;
+  font-size: .85em;
+  text-align: center;
+}
+
+.accordion__item.active:last-child .accordion-header {
+  border-radius: none;
+}
+
+.accordion:first-child>.accordion__item>.accordion-header {
+  border-bottom: 1px solid transparent;
+}
+
+.accordion__item>.accordion-header:after {
+  content: "\f3d0";
+  font-family: IonIcons;
+  font-size: 1.2em;
+  float: right;
+  position: relative;
+  top: -2px;
+  transition: .3s all;
+  transform: rotate(0deg);
+}
+
+.accordion__item.active>.accordion-header:after {
+  transform: rotate(-180deg);
+}
+
+.accordion__item.active .accordion-header {
+  background: #2D3D99;
+}
+
+.accordion__item .accordion__item .accordion-header {
+  background: #f1f1f1;
+  color: #353535;
+}
+
+/* @media screen and (max-width: 1000px) {
+  body {
+    padding: 1em;
+  }
+  
+  .accordion {
+    width: 100%;
+  }
+} */
+
+.center {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#site-title {
+  font-size: 32px;
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.language-selection {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #666;
+}
+
+/* Styling the language selection dropdown */
+.language-selection select {
+  padding: 10px;
+  border: 1px solid #3498db;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  color: #333;
+  cursor: pointer;
+  width: 200px;
+}
+
+.language-selection select:hover {
+  background-color: #e0e0e0;
+}
+
+.responsive-iframe {
+  width: 80%;
+  height: 678px;
+  border: none;
+  user-select: none;
+
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 78%;
+  height: 678px;
+  z-index: 2;
+}
+.container {
+  position: relative;
+  z-index: 1;
+}
