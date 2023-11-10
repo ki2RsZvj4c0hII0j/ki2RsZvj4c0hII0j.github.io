@@ -99,5 +99,5 @@ document.oncontextmenu = function(e) {
       }
       target = target.parentNode;
   }
-  return true; // Allow right-click if not inside an iframe
+
 };
