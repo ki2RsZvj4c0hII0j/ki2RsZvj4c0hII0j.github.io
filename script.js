@@ -91,7 +91,13 @@ window.addEventListener('contextmenu', function (e) {
 // Disable right-click on iframe
 document.oncontextmenu = function(e) {
   var target = e.target || e.srcElement;
-  if (target.className === 'responsive-iframe') {
-      return false;
+
+  // Check if the target is within an iframe
+  while (target != null) {
+      if (target.nodeName === "responsive-iframe") {
+          return false; // Disable right-click if the target is inside an iframe
+      }
+      target = target.parentNode;
   }
-}
+  return true; // Allow right-click if not inside an iframe
+};
